@@ -61,10 +61,24 @@ namespace FTPTransfer
                             FileName,
                             Codigo_Barra,
                             Etiquetas,
-                            Valores
+                            Valores,
+                            Codigo_Cliente,
+                            Codigo_Moneda,
+                            Codigo_Plaza,
+                            Codigo_Usuario,
+                            Numero_Recibo,
+                            Numero_Router,
+                            RUT_ACD,
+                            Total_Doc,
+                            Tipo_Deposito,
+                            Codigo_Error
                         )
                         VALUES 
-                            ({0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10})
+                            (
+                                {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10},
+                                {11}, {12}, {13}, {14}, {15}, {16}, {17}, {18}, {19}, 
+                                {20}
+                            )
                         
                 ", String.Format("'{0}'", sobre.NumSobre),
                         nDocumentos.ToString(),
@@ -75,12 +89,22 @@ namespace FTPTransfer
                             sobre.FechaVentas.Substring(sobre.FechaVentas.Length - 4, 2),
                             sobre.FechaVentas.Substring(0, 4)
                         ),
-                        sobre.MontoSobre.TrimStart('0'),
+                        String.Format("'{0}'", sobre.MontoSobre), 
                         String.Format("'{0}'", sobre.Raw),
                         String.Format("'{0}'", sobre.File),
                         String.Format("'{0}'", sobre.CodigoBarra),
                         "'Fecha de Ventas|Rut Cajero ACD|'",
-                        String.Format("'{0}|{1}|'", sobre.FechaVentas, sobre.RutACD)
+                        String.Format("'{0}|{1}|'", sobre.FechaVentas, sobre.RutACD),
+                        String.Format("'{0}'", sobre.CodigoCliente),
+                        String.Format("'{0}'", sobre.CodigoMoneda),
+                        String.Format("'{0}'", sobre.CodigoPlaza),
+                        String.Format("'{0}'", sobre.CodigoUsuario),
+                        String.Format("'{0}'", sobre.NumRecibo),
+                        String.Format("'{0}'", sobre.NumRouter),
+                        String.Format("'{0}'", sobre.RutACD),
+                        String.Format("'{0}'", sobre.TotalDocumentos),
+                        String.Format("'{0}'", sobre.TipoDeposito),
+                        String.Format("'{0}'", sobre.CodigoError)
                         );
                             _BaseDatos.Insert(insertQUERY, objConn, objTrans);
                             c++;

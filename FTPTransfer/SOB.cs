@@ -27,39 +27,26 @@
 
         #region Public Properties
 
-        public string CodigoBarra { get => _codigoBarra; set => _codigoBarra = value; }
+        public string CodigoBarra { get { return _codigoBarra; } set { _codigoBarra = value; } }
 
-        public string CodigoCliente { get => _codigoCliente; set => _codigoCliente = value; }
-
-        public string CodigoError { get => _codigoError; set => _codigoError = value; }
-
-        public string CodigoMoneda { get => _codigoMoneda; set => _codigoMoneda = value; }
-
-        public string CodigoPlaza { get => _codigoPlaza; set => _codigoPlaza = value; }
-
-        public string CodigoUsuario { get => _codigoUsuario; set => _codigoUsuario = value; }
-
-        public string FechaVentas { get => _fechaVentas; set => _fechaVentas = value; }
-
-        public string File { get => _file; set => _file = value; }
-
-        public string MontoSobre { get => _montoSobre; set => _montoSobre = value; }
-
-        public string NumRecibo { get => _numRecibo; set => _numRecibo = value; }
-
-        public string NumRouter { get => _numRouter; set => _numRouter = value; }
-
-        public string NumSobre { get => _numSobre; set => _numSobre = value; }
-
-        public string Raw { get => _raw; set => _raw = value; }
-
-        public string RutACD { get => _rutACD; set => _rutACD = value; }
-        public string ServicioSobre { get => _servicioSobre; set => _servicioSobre = value; }
-
-        public string TipoDeposito { get => _tipoDeposito; set => _tipoDeposito = value; }
-
-        public string TotalDocumentos { get => _totalDocumentos; set => _totalDocumentos = value; }
+        public string CodigoCliente { get { return _codigoCliente; } set { _codigoCliente = value; } }
+        public string CodigoError { get { return _codigoError; } set { _codigoError = value; } }
+        public string CodigoMoneda { get { return _codigoMoneda; } set { _codigoMoneda = value; } }
+        public string CodigoPlaza { get { return _codigoPlaza; } set { _codigoPlaza = value; } }
+        public string CodigoUsuario { get { return _codigoUsuario; } set { _codigoUsuario = value; } }
+        public string FechaVentas { get { return _fechaVentas; } set { _fechaVentas = value; } }
+        public string File { get { return _file; } set { _file = value; } }
+        public string MontoSobre { get { return _montoSobre; } set { _montoSobre = value; } }
+        public string NumRecibo { get { return _numRecibo; } set { _numRecibo = value; } }
+        public string NumRouter { get { return _numRouter; } set { _numRouter = value; } }
+        public string NumSobre { get { return _numSobre; } set { _numSobre = value; } }
+        public string Raw { get { return _raw; } set { _raw = value; } }
+        public string RutACD { get { return _rutACD; } set { _rutACD = value; } }
+        public string ServicioSobre { get { return _servicioSobre; } set { _servicioSobre = value; } }
+        public string TipoDeposito { get { return _tipoDeposito; } set { _tipoDeposito = value; } }
+        public string TotalDocumentos { get { return _totalDocumentos; } set { _totalDocumentos = value; } }
 
         #endregion Public Properties
+
     }
 }
