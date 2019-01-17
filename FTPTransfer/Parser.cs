@@ -39,7 +39,7 @@
                 CodigoMoneda = _linea.Substring(76, 5),
                 MontoSobre = _linea.Substring(81, 12),
                 CodigoError = _linea.Substring(93, 5),
-                NumRecibo = _linea.Substring(104, 8),
+                NumRecibo = _linea.Substring(105, 8),
                 CodigoBarra = _linea.Substring(113, 35),
                 Raw = _linea,
                 File = _fileName
