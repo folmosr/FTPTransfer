@@ -60,6 +60,7 @@ namespace FTPTransfer
                             Linea,
                             FileName,
                             Codigo_Barra,
+                            Codigo_Barra_Falabella,
                             Etiquetas,
                             Valores,
                             Codigo_Cliente,
@@ -77,7 +78,7 @@ namespace FTPTransfer
                             (
                                 {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10},
                                 {11}, {12}, {13}, {14}, {15}, {16}, {17}, {18}, {19}, 
-                                {20}
+                                {20}, {21}
                             )
                         
                 ", String.Format("'{0}'", sobre.NumSobre),
@@ -93,6 +94,7 @@ namespace FTPTransfer
                     String.Format("'{0}'", sobre.Raw),
                     String.Format("'{0}'", sobre.File),
                     String.Format("'{0}'", sobre.CodigoBarra),
+                    String.Format("'{0}'", sobre.CodigoBarraFalabella),
                     "'Fecha de Ventas|Rut Cajero ACD|'",
                     String.Format("'{0}|{1}|'", sobre.FechaVentas, sobre.RutACD),
                     String.Format("'{0}'", sobre.CodigoCliente),

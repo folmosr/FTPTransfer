@@ -6,6 +6,7 @@
         #region Private Fields
 
         private string _codigoBarra;
+        private string _codigoBarraFalabella;
         private string _codigoCliente;
         private string _codigoError;
         private string _codigoMoneda;
@@ -29,6 +30,8 @@
 
         public string CodigoBarra { get { return _codigoBarra; } set { _codigoBarra = value; } }
 
+        public string CodigoBarraFalabella { get => _codigoBarraFalabella; set => _codigoBarraFalabella = value; }
+
         public string CodigoCliente { get { return _codigoCliente; } set { _codigoCliente = value; } }
         public string CodigoError { get { return _codigoError; } set { _codigoError = value; } }
         public string CodigoMoneda { get { return _codigoMoneda; } set { _codigoMoneda = value; } }
@@ -47,6 +50,5 @@
         public string TotalDocumentos { get { return _totalDocumentos; } set { _totalDocumentos = value; } }
 
         #endregion Public Properties
-
     }
 }
