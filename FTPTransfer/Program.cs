@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Practices.EnterpriseLibrary.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,9 @@ namespace FTPTransfer
     {
         static void Main(string[] args)
         {
+            Logger logger = new Logger();
             try
             {
-                Logger logger = new Logger();
                 FTP clientFtp = new FTP(logger);
                 List<string> files = clientFtp.GetListFile();
                 if (files.Count > 0)
@@ -29,7 +30,7 @@ namespace FTPTransfer
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Exception:", ex.Message);
+                logger.LogWriter.Write(new LogEntry() { Message = String.Format("Excepci{on General", ex.StackTrace), Categories = new List<string> { "General" }, Priority = 1, ProcessName = Logger.PROCESS_NAME });
             }
         }
     }
